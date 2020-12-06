@@ -27,6 +27,11 @@ jobs:
     steps:
       - build_push:
           tag: "shadowsocks"
+  restkv:
+    machine: true
+    steps:
+      - build_push:
+          tag: "restkv"
 
 workflows:
   version: 2
@@ -35,3 +40,4 @@ workflows:
       - nginx
       - shadowsocks
       - qbittorrent
+      - restkv
