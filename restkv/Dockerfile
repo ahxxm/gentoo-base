@@ -1,4 +1,4 @@
-FROM rust:alpine AS builder
+FROM ekidd/rust-musl-builder AS builder
 
 ADD build.sh /
 RUN /build.sh
