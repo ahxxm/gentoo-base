@@ -4,7 +4,7 @@ ADD build.sh /
 RUN /build.sh
 
 FROM alpine:3.12 AS runner
-COPY --from=builder /kv/restkv /restkv
+COPY --from=builder /restkv /restkv
 
 EXPOSE 8080
 CMD ["/restkv"]
